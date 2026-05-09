@@ -2,7 +2,7 @@
     $host     = 'localhost';
     $dbname   = 'hecvanlife';
     $user     = 'root';       // à adapter selon ton config
-    $password = '@Dieuestbon!01';           // à adapter
+    $password = '';           // à adapter
 
     try {
         $pdo = new PDO(
