@@ -1,0 +1,44 @@
+.accueil {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.accueil h1 { 
+    font-size: 28px; 
+    font-weight: 500; 
+}
+
+.accueil p { 
+    color: #666; 
+    margin-bottom: 24px; 
+}
+
+.choix { 
+    display: flex; 
+    gap: 16px; 
+}
+
+.choix .card {
+    background: #fff;
+    border: 1px solid #e0e4ea;
+    border-radius: 12px;
+    padding: 24px 28px;
+    width: 200px;
+    text-align: center;
+}
+
+.choix .card p { 
+    font-size: 13px; 
+    color: #888; 
+    margin: 8px 0 16px; 
+}
+
+.footer { 
+    font-size: 12px; 
+    color: #aaa; 
+    margin-top: 32px; 
+}
