@@ -10,7 +10,7 @@
         private string $host = '0.0.0.0';
         private string $name = 'hecvanlife';
         private string $user = 'root';
-        private string $pass = '@Dieuestbon!01';
+        private string $pass = '';
 
         // Instance PDO unique
         private static ?PDO $connexion = null;
