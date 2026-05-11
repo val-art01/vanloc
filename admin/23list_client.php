@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once '../db.php';
+    require_once '../23_db.php';
     require_once '23menu.php'; // vérifie session + affiche menu
 
     $db = new DB();
@@ -9,7 +9,7 @@
     $lettre = $_GET['lette'] ?? '';
 
     // Requete avec ou sans filtre
-    if (lettre !== '') {
+    if ($lettre !== '') {
         $clients = $db->query(
             "SELECT id_client, nom_client, prenom, rue, code_postal, ville, gsm, email 
              FROM client
@@ -33,8 +33,8 @@
     <head>
         <title>Liste - Clients</title>
         <meta charset="utf-8">
-        <link rel ="stylesheet" type="text/css" href="./../css/style.css">
-        <link rel ="stylesheet" type="text/css" href="./../css/admin.css">
+        <link rel="stylesheet" href="./../css/style.css">
+        <link rel="stylesheet" href="./../css/23admin.css">
     </head>
     <body>
         <div class="admin-content">

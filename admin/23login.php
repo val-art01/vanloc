@@ -49,9 +49,7 @@
 
                     <div class="form-group">
                         <label for="username">Nom d'utilisateur</label>
-                        <input type="text" id="username" name="username"
-                            value="<?= htmlspecialchars($_POST['username'] ?? '') ?>"
-                            placeholder="admin" required>
+                        <input type="text" id="username" name="username" value="<?= htmlspecialchars($_POST['username'] ?? '') ?>" placeholder="admin" required>
                     </div>
 
                     <div class="form-group">
