@@ -112,3 +112,51 @@
 }
 
 .dropdown:hover .dropdown-menu { display: block; }
+
+/* Filtre alphabétique */
+.filtre-alpha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1.2rem;
+}
+
+.btn-lettre {
+    padding: 5px 10px;
+    font-size: 13px;
+    border-radius: 6px;
+    border: 1px solid #d0d5dd;
+    background: #fff;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.15s;
+}
+
+.btn-lettre:hover { background: #f0f4ff; }
+
+.btn-lettre.active {
+    background: #1a56db;
+    color: #fff;
+    border-color: #1a56db;
+}
+
+/* Tableau */
+.table-wrapper {
+    background: #fff;
+    border: 1px solid #e0e4ea;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Divers */
+.count-info     { 
+    font-size: 12px; 
+    color: #aaa; 
+    margin-top: 8px; 
+}
+
+.aucun-resultat { 
+    color: #888; 
+    font-size: 14px; 
+    padding: 16px 0; 
+}
