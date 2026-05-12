@@ -7,9 +7,9 @@
      */
     class DB {
         // Paramètres de connexion
-        private string $host = '0.0.0.0';
+        private string $host = 'localhost';
         private string $name = 'hecvanlife';
-        private string $user = 'root';
+        private string $user = 'admin';
         private string $pass = '';
 
         // Instance PDO unique

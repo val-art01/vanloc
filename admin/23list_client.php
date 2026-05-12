@@ -1,6 +1,6 @@
 <?php
     session_start();
-    require_once '../23_db.php';
+    require_once './../23_config.php';
     require_once '23menu.php'; // vérifie session + affiche menu
 
     $db = new DB();
