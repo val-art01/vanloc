@@ -32,9 +32,6 @@
 <html>
     <head>
         <title>Liste - Clients</title>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="./../css/style.css">
-        <link rel="stylesheet" href="./../css/23admin.css">
     </head>
     <body>
         <div class="admin-content">

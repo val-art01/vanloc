@@ -38,10 +38,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
         <title>Modifier un modèle</title>
-        <link rel="stylesheet" href="./../../css/style.css">
-        <link rel="stylesheet" href="./../../css/admin.css">
     </head>
 
     <body>
@@ -51,9 +48,9 @@
                 <a href="23list_modele.php" class="btn">Retour</a>
             </div>
 
-            <?php if ($erreur){ ?>
+            <?php if ($erreur): ?>
                 <div class="alert-error"><?= htmlspecialchars($erreur) ?></div>
-            <?php } ?>
+            <?php endif ?>
 
             <div class="form-card">
                 <form method="POST" action="">
@@ -64,17 +61,17 @@
                     </div>
                     <div class="form-group">
                         <label for="nom_modele">Nom du modèle</label>
-                        <input type="text" name="nom_modele" value="<?= htmlspecialchars($_POST['nom_modele'] ?? $modele['nom_modele']) ?>" required>
+                        <input type="text" id="nom_modele" name="nom_modele" value="<?= htmlspecialchars($_POST['nom_modele'] ?? $modele['nom_modele']) ?>" required/>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
                             <label for="nombre_places_route">Places en route</label>
-                            <input type="number" name="nombre_places_route" value="<?= $_POST['nombre_places_route'] ?? $modele['nombre_places_route'] ?>" min="1" required>
+                            <input type="number" id="nombre_places_route" name="nombre_places_route" value="<?= $_POST['nombre_places_route'] ?? $modele['nombre_places_route'] ?>" min="1" required>
                         </div>
                         <div class="form-group">
                             <label for="nombre_places_couchage">Places couchage</label>
-                            <input type="number" name="nombre_places_couchage" value="<?= $_POST['nombre_places_couchage'] ?? $modele['nombre_places_couchage'] ?>" min="1" required>
+                            <input type="number" id="nombre_places_couchage" name="nombre_places_couchage" value="<?= $_POST['nombre_places_couchage'] ?? $modele['nombre_places_couchage'] ?>" min="1" required>
                         </div>
                     </div>
 

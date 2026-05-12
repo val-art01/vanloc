@@ -8,6 +8,6 @@
     }
 
     // Sinon -> login
-    header('Location: 23login.php');
+    header('Location: ./23login.php');
     exit();
 ?>

@@ -9,7 +9,7 @@
     $modeles = $db->query(
         "SELECT m.*, COUNT(v.plaque) AS nb_vans
          FROM modele m
-         JOIN van v ON m.id_modele = v.id_modele
+         LEFT JOIN van v ON m.id_modele = v.id_modele
          GROUP BY m.id_modele
          ORDER BY m.nom_modele
         "
@@ -17,13 +17,9 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Modèles</title>
-        <link rel="stylesheet" href="./../css/style.css"/>
-        <link rel="stylesheet" href="./../css/admin.css"/>
     </head>
     <body>
         <div class="admin-content">
@@ -57,14 +53,14 @@
                                 <tr>
                                     <td><?= $model['id_modele'] ?></td>
                                     <td><?= htmlspecialchars($model['nom_modele']) ?></td>
-                                    <td><?= $model['nombre_place_route'] ?></td>
-                                    <td><?= $model['nombre_place_couchage'] ?></td>
+                                    <td><?= $model['nombre_places_route'] ?></td>
+                                    <td><?= $model['nombre_places_couchage'] ?></td>
                                     <td><?= htmlspecialchars($model['dimensions']) ?></td>
                                     <td><?= number_format($model['prix_jour'], 2) ?> €</td>
                                     <td class="actions">
-                                        <a href="23edit_modele.php" class="btn-action edit"> Modifier</a>
+                                        <a href="23edit_modele.php?id=<?= $model['id_modele'] ?>" class="btn-action edit"> Modifier</a>
                                         <?php if ($model['nb_vans'] == 0): ?>
-                                            <a href="23delete_mode23edit_modele.php" class="btn-action delete" onclick="return confirm('Supprimer ce modèle ?')">
+                                            <a href="23delete_modele.php?id=<?= $model['id_modele'] ?>" class="btn-action delete" onclick="return confirm('Supprimer ce modèle ?')">
                                                 Supprimer
                                             </a>
                                         <?php else: ?>

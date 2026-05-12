@@ -29,14 +29,10 @@
     }
 ?>
 
-
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="UTF-8">
         <title>Ajouter un modèle</title>
-        <link rel="stylesheet" href="./../../css/style.css">
-        <link rel="stylesheet" href="./../../css/admin.css">
     </head>
 
     <body>
