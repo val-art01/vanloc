@@ -57,7 +57,6 @@
                                     </td>
                                     <td>
                                         <?= htmlspecialchars($v['nom_modele']) ?>
-                                        <small style="color:#aaa; display:block;">ID: <?= $v['id_modele'] ?></small>
                                     </td>
                                     <td>
                                         <?= $v['nombre_places_route'] ?>

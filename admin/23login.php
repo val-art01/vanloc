@@ -28,7 +28,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Connexion Admin — HEC VanLife</title>
+        <title>Connexion Admin</title>
         <link rel="stylesheet" href="./../css/style.css">
         <link rel="stylesheet" href="./../css/23admin.css">
     </head>

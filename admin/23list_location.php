@@ -27,8 +27,8 @@
 
     // Construction de la requête avec filtres optionnels
     $sql = "SELECT l.id_location, l.date_debut, l.date_fin, c.nom_client, c.prenom, c.id_client, l.plaque,
-            DATEDIFF(l.date_fin, l.date_debut) + 1 AS duree, m.prix_jour,
-            (DATEDIFF(l.date_fin, l.date_debut) + 1) * m.prix_jour AS total
+               DATEDIFF(l.date_fin, l.date_debut) + 1 AS duree, m.prix_jour,
+               (DATEDIFF(l.date_fin, l.date_debut) + 1) * m.prix_jour AS total
             FROM location l
             INNER JOIN client c ON l.id_client = c.id_client
             INNER JOIN van v    ON l.plaque    = v.plaque
@@ -37,7 +37,7 @@
            ";
 
     $params = [] ;
-    
+
     if ($filtre_client !== '') {
         $sql .= " AND c.id_client = ?";
         $params[] = $filtre_client;
@@ -56,7 +56,7 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>Locations — HEC VanLife</title>
+        <title>Locations</title>
     </head>
 
     <body>
@@ -104,7 +104,6 @@
             </div>
         </form>
 
-        <!-- Tableau -->
         <?php if (empty($locations)): ?>
             <p class="aucun-resultat">Aucune location trouvée.</p>
         <?php else: ?>
@@ -147,7 +146,6 @@
             </div>
             <p class="count-info"><?= count($locations) ?> location(s) affichée(s)</p>
         <?php endif; ?>
-
     </div>
     </body>
 </html>
