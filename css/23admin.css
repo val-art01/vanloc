@@ -209,3 +209,30 @@
     justify-content: flex-end;
     margin-top: 8px;
 }
+
+/* Filtres */
+.filtre-form {
+    background: #fff;
+    border: 1px solid #e0e4ea;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 1.2rem;
+}
+
+.filtre-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
+
+.filtre-row .form-group {
+    flex: 1;
+    min-width: 180px;
+    margin-bottom: 0;
+}
+
+.filtre-actions {
+    display: flex;
+    gap: 8px;
+}
