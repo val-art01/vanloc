@@ -40,12 +40,12 @@
             </a>
 
             <div class="dropdown">
-                <a href="#" class="<?= in_array($page_active, ['23rapport1.php','23rapport2.php']) ? 'active' : '' ?>">
-                    Rapports ▾
+                <a href="#" class="<?= in_array($page_active, ['23rapport1_modele.php','23rapport2_client.php']) ? 'active' : '' ?>">
+                    Rapports
                 </a>
                 <div class="dropdown-menu">
-                    <a href="23rapport1.php">Revenus par modèle</a>
-                    <a href="23rapport2.php">Locations par client</a>
+                    <a href="23rapport1_modele.php">Revenus par modèle</a>
+                    <a href="23rapport2_client.php">Locations par client</a>
                 </div>
             </div>
 
